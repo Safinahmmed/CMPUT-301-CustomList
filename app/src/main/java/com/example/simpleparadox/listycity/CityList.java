@@ -32,5 +32,17 @@ public class CityList {
         Collections.sort(list);
         return list;
     }
+    public int countCities()
+    {
+        return cities.size();
+    }
+    public void deleteCity(City city){
+        if(cities.contains(city)){
+            cities.remove(city);
+        }
+        else {
+            throw new IllegalArgumentException();
+        }
+    }
 
 }
